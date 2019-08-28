@@ -1,0 +1,6 @@
+version: '3'
+
+services:
+  am_i_tired:
+    image: atorin/vsc-debug:scenario-1
+    restart: always
