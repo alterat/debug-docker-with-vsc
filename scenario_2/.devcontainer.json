@@ -1,0 +1,12 @@
+// See https://aka.ms/vscode-remote/devcontainer.json for format details.
+{
+	"name": "Debug Sample",
+	"dockerFile": "./Dockerfile",
+	"extensions": [
+		"ms-python.python"
+	],
+	"shutdownAction": "stopContainer",
+	"workspaceFolder": "/",
+	"overrideCommand": true,
+	"postCreateCommand": "/usr/local/bin/python -m pip install -U pylint --user"
+}

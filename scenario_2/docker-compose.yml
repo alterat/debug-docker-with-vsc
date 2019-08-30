@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  my-first-debug:
+    build: 
+      context: .
+      dockerfile: ./Dockerfile
+    restart: always
+    command: echo Suspending execution && sleep 1000
