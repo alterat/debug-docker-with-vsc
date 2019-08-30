@@ -9,3 +9,7 @@ Start an existing container and use VSC to do some basic diagnostics (logs, term
 ## Scenario 2
 
 Use VSC to start a container defined by a Dockerfile. 
+
+## Scenario 3
+
+Debug a particular service of a docker-compose stack launched from VSC.

@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  am_i_tired:
+    build: 
+      context: ./am_i_tired/
+      dockerfile: ./Dockerfile
+    env_file: .env
+    restart: always
+    depends_on: 
+      - broker
+    # command: echo Suspending execution && sleep 1000
+
+  generator:
+    build:
+      context: ./generator/
+      dockerfile: ./Dockerfile
+    env_file: .env
+    restart: always
+    depends_on:
+      - broker
+
+  # message broker
+  broker:
+    image: redis:3.2-alpine
+    restart: always    

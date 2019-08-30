@@ -1,0 +1,14 @@
+// For format details, see https://aka.ms/vscode-remote/devcontainer.json or the definition README at
+// https://github.com/microsoft/vscode-dev-containers/tree/master/containers/docker-in-docker-compose
+{
+	"name": "Docker compose debugging",
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "generator",
+	"extensions": [
+		"ms-python.python"
+	],
+	"shutdownAction": "stopContainer",
+	"overrideCommand": true,
+	"postCreateCommand": "/usr/local/bin/python -m pip install -U pylint --user",
+	"command": "bash sleep 86400"
+}
