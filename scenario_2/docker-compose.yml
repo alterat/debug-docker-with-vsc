@@ -1,9 +1,9 @@
 version: '3'
 
 services:
-  my-first-debug:
+  am_i_tired:
     build: 
       context: .
       dockerfile: ./Dockerfile
     restart: always
-    command: echo Suspending execution && sleep 1000
+    entrypoint: sleep 1000
