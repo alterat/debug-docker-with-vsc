@@ -2,13 +2,11 @@
 // https://github.com/microsoft/vscode-dev-containers/tree/master/containers/docker-in-docker-compose
 {
 	"name": "Docker compose debugging",
-	"dockerComposeFile": "docker-compose.yml",
-	"service": "generator",
+	"dockerComposeFile": ["docker-compose.yml", "docker-compose.debug.yml"],
+	"service": "am_i_tired",
 	"extensions": [
 		"ms-python.python"
 	],
-	"shutdownAction": "stopContainer",
-	"overrideCommand": true,
+	"shutdownAction": "stopCompose",
 	"postCreateCommand": "/usr/local/bin/python -m pip install -U pylint --user",
-	"command": "bash sleep 86400"
 }

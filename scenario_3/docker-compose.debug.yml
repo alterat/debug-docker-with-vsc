@@ -1,0 +1,6 @@
+version: '3'
+
+services:
+  am_i_tired:
+    # overwrite command layer
+    entrypoint: "sleep 1000"
