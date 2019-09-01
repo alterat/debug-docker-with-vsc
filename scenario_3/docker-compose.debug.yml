@@ -4,3 +4,6 @@ services:
   am_i_tired:
     # overwrite command layer
     entrypoint: "sleep 1000"
+    # # uncomment to mount code folder
+    # volumes:
+    #   - "./am_i_tired:/code"
